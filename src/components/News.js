@@ -23,7 +23,7 @@ const News = (props) => {
   const update = async () => {
     props.setProgress(10);
     //progress bar
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.cetagory}&apiKey=ac8876d9623a44e1877f2be5f4e9885a&pageSize=${props.pageSize}&page=${page}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.cetagory}&apiKey=bc7191feb8fb4e1b88ad3923c66f505e&pageSize=${props.pageSize}&page=${page}`;
     setloading(true)
     let data = await fetch(url);
     props.setProgress(30);
@@ -49,7 +49,7 @@ const News = (props) => {
   }, [])
   
  const  fetchMoreData = async () => {
-   const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.cetagory}&apiKey=ac8876d9623a44e1877f2be5f4e9885a&pageSize=${props.pageSize}&page=${page+1}`;
+   const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.cetagory}&apiKey=bc7191feb8fb4e1b88ad3923c66f505e&pageSize=${props.pageSize}&page=${page+1}`;
    setpage(page + 1)  
     let data = await fetch(url);
     let parsedData = await data.json();
